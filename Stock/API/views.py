@@ -14,7 +14,7 @@ file=open(os.path.join(BASE_DIR,'Stock List.json'),'r')
 res=file.read() 
 res=json.loads(res)
 # Create your views here.
-@api_view(['GET'])
+@api_view(['POST'])
 def dateFilter(request):
     data=request.data
     if ('from' not in data) or ('to' not in data) or ('symbol' not in data):
